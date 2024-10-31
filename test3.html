@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 0 75px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    /* position: relative; */
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* position: relative; */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+.hero {
+    padding: 50px 20px;
+    background-color: #161513;
+}
+
+.hero .avatar {
+    width: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right top, #ef7477, #ed5c81, #e54692, #d236a8, #b235c1);
+    /* background-color: orangered; */
+    align-items: center;
+    display: flex;
+    
+}
+
+
+.hero h1 {
+    font-size: 36px;
+    padding: 0 370px;
+}
+
+.hero h1 span {
+    background: linear-gradient(to right , #ef7477, #ed5c81, #e54692, #d236a8, #b235c1);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bolder;
+    /* color: orangered; */
+
+}
+
+.hero p {
+    margin: 20px auto;
+    max-width: 600px;
+    padding-bottom: 20px;
+}
+
+.buttons .btn {
+    /* background-color: #f09c3b; */
+    /* color: white; */
+    padding: 10px 20px;
+    margin: 10px;
+    /* border-radius: 5px; */
+    text-decoration: none;
+}
+.buttons .btn:hover{
+    background: linear-gradient(to right , #ef7477, #ed5c81, #e54692, #d236a8, #b235c1);
+    /* background-image: linear-gradient(to bottom, #ffb097, #fa9a7b, #f3835f, #eb6c44, #e15427); */
+    color: white;
+
+}
+.cv{
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+}
+.get{
+    background-color: white;
+    color: #000;
+    border-radius: 20px;
+}
+
+.experience-with {
+    padding: 50px 20px;
+    background-color: #161513;
+}
+
+.experience-with h2 {
+    margin-bottom: 20px;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tech-icons img {
+    width: 50px;
+    border-radius: 20%;
+}
+.tech-icons img:hover{
+    background: linear-gradient(to right , #ef7477, #ed5c81, #e54692, #d236a8, #b235c1);
+    /* background-color: orangered; */
+}
+
+.projects {
+    padding: 50px 20px;
+    background-color: #161513;
+}
+
+.projects h2 {
+    margin-bottom: 20px;
+    background-image: linear-gradient(to bottom, #ffb097, #fa9a7b, #f3835f, #eb6c44, #e15427);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 60px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom:50px ;
+}
+
+.project-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.project-item:hover{
+    background-image: linear-gradient(to bottom, #ffb097, #fa9a7b, #f3835f, #eb6c44, #e15427);
+    /* background-color: orangered; */
+}
+
+.project-item img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+.project-item a{
+    color: white;
+    
+}
+
+
+.project-item h3 {
+    margin: 10px 0;
+}
+
+.experience {
+    padding: 50px 20px;
+    background-color: #161513;
+}
+
+.experience h2 {
+    margin-bottom: 20px;
+    /* background-image: linear-gradient(to bottom, #62adf3, #4399ec, #3992e9, #2e8ae5, #2283e1); */
+    background-image: linear-gradient(to bottom, #86bff6, #6fb0f1, #59a1ec, #4092e7, #2283e1);
+    -webkit-background-clip: text;
+    color: transparent;
+    /* color: rgb(57, 57, 196); */
+    text-decoration: #86bff6;
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    
+}
+
+.experience-item {
+    /* display:inline-flexbox; */
+    margin-bottom: 20px;
+    
+    padding: 0 250px;
+}
+.experience-item p{
+    text-align: justify;
+}
+h3 img{
+    width: 30px;
+    gap: 10px;
+    
+    /* display: flex; */
+    /* flex-direction: row; */
+}
+.octane{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.octane h3{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+section h2,.mail,.bojan,.social-icons, .la{
+    align-items: flex-start;
+    padding: 10px 250px;
+    /* padding-left: 250px; */
+    /* padding-right: 250px; */
+}
+
+.contact {
+    padding: 50px 20px;
+    background-color: #191919;
+    /* text-align: left; */
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    /* text-align: left; */
+
+}
+.contact p img{
+    width: 20px;
+    color: white;
+    /* display: inline-flex; */
+    /* margin-top: 10px; */
+}
+.mail p{
+    display: flex;
+    gap: 20px;
+
+}
+.mail p a{
+    color: white;
+    text-decoration: none;
+}
+.mail p a:hover{
+    color: grey;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* text-align: left; */
+}
+
+.social-icons img {
+    width: 30px;
+    border-radius: 50%;
+}
+.social-icons img:hover{
+    background-color: grey;
+}
+    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="picz/androgynous-avatar-non-binary-queer-person.png" alt="Avatar" class="avatar">
+        <h1>I do code and <br> make content <span>about it!</span></h1>
+        <p>I am a seasoned full-stack software engineer with over 8 years of professional experience, specializing in backend development. My expertise lies in crafting robust and scalable SaaS-based architectures on the Amazon AWS platform.</p>
+        <div class="buttons">
+            <a href="#contact" class="btn get">Get In Touch</a>
+            <a href="#" class="btn cv">Download CV</a>
+        </div>
+    </section>
+
+    <section class="experience-with">
+        <h2>Experience With</h2>
+        <div class="tech-icons">
+            <img src="picz/js-svgrepo-com.svg" alt="JavaScript">
+            <img src="picz/next-js-svgrepo-com.svg" alt="Node.js">
+            <img src="picz/html5-02-svgrepo-com.svg" alt="HTML5">
+            <img src="picz/css3-alt-svgrepo-com.svg" alt="CSS3">
+            <img src="picz/react-svgrepo-com.svg" alt="AWS">
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <img src="picz/food.png" alt="HTML Tutorial">
+                <h3>Power of HTML</h3>
+                <a href="#">HTML Tutorial</a>
+            </div>
+            
+            <div class="project-item">
+                <img src="picz/mih profile.png" alt="CSS Magic">
+                <h3>Unlock CSS Magic</h3>
+                <a href="#">CSS Tutorial</a>
+            </div>
+        </div> 
+        <div class="project-list"> 
+            <div class="project-item">
+                <img src="picz/two column.png" alt="HTML Tutorial">
+                <h3>Powerof HTMl</h3>
+                <a href="#">Html Tutorial</a>
+            </div>
+            <div class="project-item">
+                <img src="picz/student form.png" alt="CSS Magic">
+                <h3>Unlock CSS Magic</h3>
+                <a href="#">CSS Tutorial</a>
+            </div>
+           
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2 class="aa">EXPERIENCE</h2>
+        <div class="experience-item">
+            <div class="octane">
+                <h3> <img src="picz/google-color-svgrepo-com(1).svg" alt="">Lead Software Engineer at Google</h3>
+                <p>Nov 2019 – Present</p>
+
+            </div>
+           
+            <p>As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with dynamic team of engineers. I contributed to the enchancement of search accuracy and efficiency, optimizing user experience for millions of users worldwide.</p>
+        </div>
+        <div class="experience-item">
+            <div class="octane">
+                <h3> <img src="picz/apple-color-svgrepo-com.svg" alt="">Junior Software Engineer at Apple</h3>
+            <p>Jan 2016 – Dec 2017</p>
+
+            </div>
+            
+            <p>During my tenure at Apple, I held the role of Software Architect, where I played a key role in shaping the architecture of mission-critical software projects. Responsible for designing scalable and efficient systems. I provided technical leadership to a cross-functional team.</p>
+        </div>
+        <div class="experience-item">
+            <div class="octane">
+                <h3> <img src="picz/meta-svgrepo-com.svg" alt="">Software Engineer at Meta</h3>
+            <p>Jan 2017 – Oct 2019</p>
+
+            </div>
+            
+            <p>At Meta, I served as a Software Engineer, focusing on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features. I leveraged my expertise o ensure seamless functionality and scalability.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact bojan" style="text-align: left;">
+        <h2>Contact</h2>
+        <p class="la">Seasoned Full Stack Software Engineer with over 8 years of hands-on experience in designing and implementing robust, scalable, and innovative web solutions. Adept at leveraging a comprehensive skill set encompassing front-end and back-end technologies.</p>
+        <div class="mail">
+            <p> <img src="picz/mail-svgrepo-com.svg" alt="mail"><a href="#">abdoubojang330@gmail.com</a></p>
+        </div>
+
+        <!-- <p> <img src="picz/mail-svgrepo-com.svg" alt="">abdoubojang330@gmail.com</p> -->
+        
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank"><img src="picz/instagram-svgrepo-com.svg" alt="Instagram"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="picz/twitter-color-svgrepo-com.svg" alt="twitter"></a>
+            <a href="https://youtube.com/" target="_blank"><img src="picz/youtube-168-svgrepo-com.svg" alt="YouTube" ></a>
+        </div>
+    </section>
+
+</body>
+</html>
